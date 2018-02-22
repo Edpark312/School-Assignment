@@ -8,11 +8,12 @@ int main()
 	double numBooks = 0;				// Number of books purchased by customer
 	const double booksPrice = 9;		// Price of books
 	const double SHIP_COST = .95;		// Shipping cost of books
-	double numMovies = 0;				// 
+	double numMovies = 0;				// Number of movies purchased by customer
 	const double moviePrice = 13.97;	// Price of Movies
 	const double MOVIE_TAX = .04;		// Tax on Movie
-	double numPeanuts = 0;				// 
-	const double LBS_PEANUT = .30;		// 
+	double numPeanuts = 0;				// Number of peanuts purchased by customer
+	const double peanutsPrice = 1.72;	// Price of Peanuts
+	const double LBS_PEANUT = .30;		// Shipping tax on Peanuts
 	double booksSubtotal;				// Subtotal of books
 	double moviesSubtotal;				// Subtotal of movies
 	double peanutsSubtotal;				// Subtotal of peanuts
@@ -30,7 +31,10 @@ int main()
 
 	// Computer 
 	
-	
+	booksSubtotal = (numBooks * booksPrice) + (numBooks * SHIP_COST);
+	moviesSubtotal = (numMovies * moviePrice) + (numMovies * MOVIE_TAX);
+	peanutsSubtotal = (numPeanuts * peanutsPrice) + (numPeanuts * peanutsPrice);
+	totalPrice = booksSubtotal + moviesSubtotal + peanutsSubtotal;
 
 	// Output  
 	
@@ -45,7 +49,11 @@ int main()
 	cout << "Cashier: Edward Park								" << endl;
 	cout << "---------------------------------------------------" << endl;
 
-	cout << numBooks << "   Books			" << booksSubtotal << endl;
+	cout << numBooks <<	"	Books			" << booksSubtotal << endl;
+	cout << numMovies << "	Movies			" << moviesSubtotal << endl; 
+	cout << numPeanuts << "	Peanuts			" << peanutsSubtotal << endl;
+	cout << "==============================================================" << endl;
+	cout << "					SUBTOTAL   " << totalPrice << endl;
  	
 	system("pause");
 	return 0;
