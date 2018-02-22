@@ -10,7 +10,7 @@ int main()
 	const double SHIP_COST = .95;		// Shipping cost of books
 	double numMovies = 0;				// Number of movies purchased by customer
 	const double moviePrice = 13.97;	// Price of Movies
-	const double MOVIE_TAX = .04;		// Tax on Movie
+	const double MOVIE_TAX = 1.04;		// Tax on Movie
 	double numPeanuts = 0;				// Number of peanuts purchased by customer
 	const double peanutsPrice = 1.72;	// Price of Peanuts
 	const double LBS_PEANUT = .30;		// Shipping tax on Peanuts
@@ -32,8 +32,8 @@ int main()
 	// Computer 
 	
 	booksSubtotal = (numBooks * booksPrice) + (numBooks * SHIP_COST);
-	moviesSubtotal = (numMovies * moviePrice) + (numMovies * MOVIE_TAX);
-	peanutsSubtotal = (numPeanuts * peanutsPrice) + (numPeanuts * peanutsPrice);
+	moviesSubtotal = (numMovies * moviePrice) * MOVIE_TAX;
+	peanutsSubtotal = (numPeanuts * peanutsPrice) + (numPeanuts * LBS_PEANUT);
 	totalPrice = booksSubtotal + moviesSubtotal + peanutsSubtotal;
 
 	// Output  
